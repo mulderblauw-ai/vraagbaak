@@ -33,12 +33,12 @@ if (process.argv.includes("--encrypt")) {
   if (!pw || pw.length < 12) throw new Error("Zet VRAAGBAAK_PASSWORD (minimaal 12 tekens) voordat je versleutelt.");
   mkdirSync(root + "docs", { recursive: true });
   execFileSync("npx", ["staticrypt", "build/plain.html", "-d", "docs", "--short",
-    "--remember", "30",
+    "--remember", "false",
+    "--template", "src/login.html",
     "--template-title", "Vraagbaak · Mulderblauw",
-    "--template-instructions", "Voer het wachtwoord in dat je van Kim hebt gekregen.",
+    "--template-instructions", "Voer het wachtwoord in",
     "--template-button", "Openen",
     "--template-placeholder", "Wachtwoord",
-    "--template-remember", "Onthoud mij 30 dagen",
     "--template-error", "Onjuist wachtwoord",
     "--template-color-primary", "#605243",
     "--template-color-secondary", "#f2eee8",
