@@ -1,0 +1,12 @@
+{
+  "name": "vraagbaak-voorstel",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "encrypt": "node tools/build.mjs --encrypt"
+  },
+  "devDependencies": {
+    "staticrypt": "3.5.4"
+  }
+}
